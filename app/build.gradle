@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) 2019, Tulsiram Rathod.
+ */
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../dependencies.gradle'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.tulsiram.app_bundle"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dynamicFeatures = [":feature_sign_up"]
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api androidx.appcompat
+    api androidx.core
+    api androidx.constraintlayout
+    api androidx.material
+    implementation playcore
+    testImplementation junit
+    androidTestImplementation androidx.test.runner
+    androidTestImplementation androidx.test.espresso
+}
