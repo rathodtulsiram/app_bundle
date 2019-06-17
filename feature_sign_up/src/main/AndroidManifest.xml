@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2019, Tulsiram Rathod.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.tulsiram.app_bundle.feature_sign_up">
+
+    <dist:module
+            dist:instant="false"
+            dist:onDemand="true"
+            dist:title="@string/title_dynamic_feature_sign_up">
+        <dist:fusing dist:include="true"/>
+    </dist:module>
+
+    <application tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+                android:name=".ui.activities.SignUpActivity"
+                android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

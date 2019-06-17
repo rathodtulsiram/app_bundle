@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2019, Tulsiram Rathod.
+ */
+
+ext {
+    androidx = [
+            appcompat       : 'androidx.appcompat:appcompat:1.0.2',
+            core            : 'androidx.core:core-ktx:1.0.2',
+            constraintlayout: 'androidx.constraintlayout:constraintlayout:1.1.3',
+            material : 'com.google.android.material:material:1.0.0',
+            test            : [
+                    runner  : 'androidx.test:runner:1.2.0',
+                    espresso: 'androidx.test.espresso:espresso-core:3.2.0'
+            ]
+    ]
+    junit = 'junit:junit:4.12'
+    playcore = 'com.google.android.play:core:1.5.0'
+}
